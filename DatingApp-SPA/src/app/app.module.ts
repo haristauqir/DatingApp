@@ -12,11 +12,13 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvide } from 'src/app/_services/error.interceptor';
 import { AlertifyService } from 'src/app/_services/alertify.service';
-import { MemberListComponent } from './member-list/member-list.component';
+import { MemberListComponent } from './members/member-list/member-list.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { appRoutes } from '../app/routes';
 import { AuthGuard } from '../app/_guards/auth.guard';
+import { UserService } from '../app/_services/user.service';
+import { MemberCardComponent } from './members/member-card/member-card.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { AuthGuard } from '../app/_guards/auth.guard';
     RegisterComponent,
     MemberListComponent,
     ListsComponent,
-    MessagesComponent
+    MessagesComponent,
+    MemberCardComponent
 ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { AuthGuard } from '../app/_guards/auth.guard';
     AuthService,
     ErrorInterceptorProvide,
     AlertifyService,
-    AuthGuard
+    AuthGuard,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
