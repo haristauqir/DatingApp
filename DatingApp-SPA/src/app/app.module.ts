@@ -23,7 +23,7 @@ import { MemberCardComponent } from './members/member-card/member-card.component
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { MemberDetailResolver } from '../app/_resolver/member-detail.resolver';
 import { MemberListResolver } from '../app/_resolver/member-list.resolver';
-
+import { NgxGalleryModule } from 'ngx-gallery';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -47,6 +47,7 @@ export function tokenGetter() {
     FormsModule,
     TabsModule.forRoot(),
     BsDropdownModule.forRoot(),
+    NgxGalleryModule,
     RouterModule.forRoot(appRoutes),
     JwtModule.forRoot({
       config: {
