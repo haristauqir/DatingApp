@@ -12,7 +12,7 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="card">
-          <img src="{{user?.photoUrl}}" alt="" class="card-img-top img-thumbnail">
+          <img src="{{user.photoUrl}}" alt="" class="card-img-top img-thumbnail">
         <div class="card-body">
           <div>
             <strong>Location:</strong>
@@ -33,7 +33,7 @@
         </div>
         <div class="card-footer">
           <div class="btn-group d-flex">
-              <button [disabled]="!editForm.dirty" class="btn btn-success btn-block">Save Changes</button>
+              <button [disabled]="!editForm.dirty" Form="editForm" class="btn btn-success btn-block">Save Changes</button>
           </div>
         </div>
       </div>
@@ -42,13 +42,13 @@
       <div class="tab-panel">
         <tabset class="member-tabset">
           <tab heading="Edit Profile">
-            <form #editForm="ngForm" (ngSubmit)="updateUser()">
+            <form #editForm="ngForm" id="editForm" (ngSubmit)="updateUser()">
                 <h4>Description</h4>
-                <textarea class="form-control" rows="10" [(ngModel)]="user.introduction"></textarea>
+                <textarea class="form-control" name="introduction" rows="10" [(ngModel)]="user.introduction"></textarea>
                 <h4>Looking For</h4>
-                <textarea class="form-control" rows="10" [(ngModel)]="user.lookingFor"></textarea>
+                <textarea class="form-control" name='lookingFor' rows="10" [(ngModel)]="user.lookingFor"></textarea>
                 <h4>Interests</h4>
-                <textarea class="form-control" rows="10" [(ngModel)]="user.interests"></textarea>
+                <textarea class="form-control" name="interests" rows="10" [(ngModel)]="user.interests"></textarea>
                 <h4>Location Details</h4>
                 <div class="form-inline">
                   <label for="city">City</label>

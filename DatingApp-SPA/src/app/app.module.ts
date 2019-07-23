@@ -26,6 +26,7 @@ import { MemberListResolver } from '../app/_resolver/member-list.resolver';
 import { NgxGalleryModule } from 'ngx-gallery';
 import { MemberEditComponent } from 'src/app/members/member-edit/member-edit.component';
 import { MemberEditResolver } from 'src/app/_resolver/member-edit.resolver';
+import { PreventUnsavedChangesGuard } from 'src/app/_guards/prevent-unsaved-changes.guard';
 
 
 export function tokenGetter() {
@@ -69,7 +70,8 @@ export function tokenGetter() {
     UserService,
     MemberDetailResolver,
     MemberListResolver,
-    MemberEditResolver
+    MemberEditResolver,
+    PreventUnsavedChangesGuard
   ],
   bootstrap: [AppComponent]
 })
