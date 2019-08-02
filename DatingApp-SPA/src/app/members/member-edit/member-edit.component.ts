@@ -28,6 +28,7 @@ export class MemberEditComponent implements OnInit {
       this.user = data['user'];
     });
 
+    this.SampleUser();
   }
 
   updateUser() {
@@ -38,4 +39,9 @@ export class MemberEditComponent implements OnInit {
       this.alertify.error(error);
     });
   }
+
+  SampleUser() {
+    this.alertify.message('I am loaded!');
+  }
+
 }
