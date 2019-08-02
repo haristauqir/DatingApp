@@ -27,8 +27,6 @@ export class MemberEditComponent implements OnInit {
     this.route.data.subscribe(data => {
       this.user = data['user'];
     });
-
-    this.SampleUser();
   }
 
   updateUser() {
@@ -38,10 +36,6 @@ export class MemberEditComponent implements OnInit {
     }, error => {
       this.alertify.error(error);
     });
-  }
-
-  SampleUser() {
-    this.alertify.message('I am loaded!');
   }
 
 }
