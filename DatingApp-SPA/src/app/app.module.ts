@@ -27,7 +27,7 @@ import { NgxGalleryModule } from 'ngx-gallery';
 import { MemberEditComponent } from 'src/app/members/member-edit/member-edit.component';
 import { MemberEditResolver } from 'src/app/_resolver/member-edit.resolver';
 import { PreventUnsavedChangesGuard } from 'src/app/_guards/prevent-unsaved-changes.guard';
-
+import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -44,7 +44,8 @@ export function tokenGetter() {
     ListsComponent,
     MessagesComponent,
     MemberCardComponent,
-    MemberDetailComponent
+    MemberDetailComponent,
+    PhotoEditorComponent
 ],
   imports: [
     BrowserModule,
