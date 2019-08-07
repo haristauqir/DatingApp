@@ -31,4 +31,9 @@ constructor(private http: HttpClient) { }
     return this.http.put<User>(this.baseUrl + 'users/' + id, user);
   }
 
+  setMainPhoto(userId: number, id: Number) {
+    return this.http.post<User>(this.baseUrl + 'users/' + userId + '/photos/' + id + '/setMain', {});
+  }
+
+
 }
