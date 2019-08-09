@@ -123,9 +123,13 @@ namespace DatingApp.API.Controllers
         photoFromRepo.IsMain = true;
 
         if (await _repo.SaveAll())
-          NoContent();
+        {
+            return NoContent();
 
-         return BadRequest("Could not set photo to MAIN...");
+        }
+
+        return BadRequest("Could not set photo to MAIN...");
+
     }
 
   }
