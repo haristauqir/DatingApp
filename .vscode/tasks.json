@@ -1,20 +1,15 @@
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558
-  // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
-    {
-      "taskName": "build",
-      "command": "dotnet build",
-      "type": "shell",
-      "args": [
-        "${workspaceRoot}/DatingApp.API/DatingApp.API.csproj"
-    ],
-      "group": "build",
-      "presentation": {
-        "reveal": "silent"
-      },
-      "problemMatcher": "$msCompile"
-    }
+      {
+          "label": "build",
+          "command": "dotnet",
+          "type": "process",
+          "args": [
+              "build",
+              "${workspaceRoot}/DatingApp.API/DatingApp.API.csproj"
+          ],
+          "problemMatcher": "$msCompile"
+      }
   ]
 }

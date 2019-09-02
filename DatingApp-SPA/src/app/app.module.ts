@@ -7,7 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JwtModule } from '@auth0/angular-jwt';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
-import { BsDropdownModule, BsDatepickerModule, TabsModule } from 'ngx-bootstrap';
+import { BsDropdownModule, BsDatepickerModule, TabsModule, PaginationModule } from 'ngx-bootstrap';
 import { TimeAgoPipe } from 'time-ago-pipe';
 import { AuthService } from './_services/auth.service';
 import { HomeComponent } from './home/home.component';
@@ -57,6 +57,7 @@ export function tokenGetter() {
     FormsModule,
     ReactiveFormsModule,
     TabsModule.forRoot(),
+    PaginationModule.forRoot(),
     BsDropdownModule.forRoot(),
     BsDatepickerModule.forRoot(),
     NgxGalleryModule,
