@@ -10,6 +10,7 @@ import { MemberListResolver } from '../app/_resolver/member-list.resolver';
 import { MemberEditComponent } from 'src/app/members/member-edit/member-edit.component';
 import { MemberEditResolver } from 'src/app/_resolver/member-edit.resolver';
 import { PreventUnsavedChangesGuard } from 'src/app/_guards/prevent-unsaved-changes.guard';
+import { ListsResolver } from '../app/_resolver/lists.resolver';
 
 export const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -20,6 +21,6 @@ export const appRoutes: Routes = [
   { path: 'members', component: MemberListComponent, canActivate: [AuthGuard],
   resolve: { users: MemberListResolver }  },
   { path: 'messages', component: MessagesComponent },
-  { path: 'lists', component: ListsComponent },
+  { path: 'lists', component: ListsComponent, resolve: { users: ListsResolver } },
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];
